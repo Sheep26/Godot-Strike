@@ -12,13 +12,46 @@ grow_vertical = 2
 script = ExtResource("1_y2ie4")
 
 [node name="ColorRect" type="ColorRect" parent="."]
-offset_right = 46.0
-offset_bottom = 648.0
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 47.0
 color = Color(0.231373, 0.231373, 0.231373, 0.733333)
 
 [node name="HomeButton" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -82.0
+offset_top = 8.0
+offset_right = -27.0
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "Home"
+flat = true
+
+[node name="PlayButton" type="Button" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -27.0
+offset_top = 8.0
+offset_right = 28.0
+offset_bottom = 39.0
+grow_horizontal = 2
+text = "Play"
+flat = true
+
+[node name="SettingsButton" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_right = 46.0
-offset_bottom = 46.0
+offset_left = 604.0
+offset_top = 8.0
+offset_right = 659.0
+offset_bottom = 39.0
+text = "Settings"
+flat = true
 
 [connection signal="pressed" from="ColorRect/HomeButton" to="." method="_homeButtonPressed"]
+[connection signal="pressed" from="ColorRect/PlayButton" to="." method="_playButtonPressed"]
+[connection signal="pressed" from="ColorRect/SettingsButton" to="." method="_settingsButtonPressed"]

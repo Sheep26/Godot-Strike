@@ -1,19 +1,22 @@
 extends Node
 
 class Menu:
-	var name: String
-	var id: int
+	var oname: String
+	var oid: int
 	var open: bool
-	var resource
-	var instance
+	var oresource
+	var instance: Node
 	
 	func _init(name, id, resource):
-		self.name = name
-		self.id = id
-		self.resource = resource
+		self.oname = name
+		self.oid = id
+		self.oresource = resource
+		
+	func _instantiate():
+		instance = oresource.instantiate()
 
 func _ready():
 	pass
 
-func _process(delta):
+func _process(_delta):
 	pass
