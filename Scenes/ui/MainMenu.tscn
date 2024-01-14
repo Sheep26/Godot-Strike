@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwkhl0b0f47mh"]
+[gd_scene load_steps=2 format=3 uid="uid://bwkhl0b0f47mh"]
 
 [ext_resource type="Script" path="res://Scripts/MainMenu.gd" id="1_y2ie4"]
-[ext_resource type="Texture2D" uid="uid://duw5d2r1vkyow" path="res://Assets/hud/homebutton.png" id="2_hsfte"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -19,8 +18,7 @@ color = Color(0.231373, 0.231373, 0.231373, 0.733333)
 
 [node name="HomeButton" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_right = 230.0
-offset_bottom = 235.0
-icon = ExtResource("2_hsfte")
+offset_right = 46.0
+offset_bottom = 46.0
 
 [connection signal="pressed" from="ColorRect/HomeButton" to="." method="_homeButtonPressed"]
