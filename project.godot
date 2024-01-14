@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Godot Strike"
-run/main_scene="res://Maps/example_map.tscn"
+run/main_scene="res://Scenes/ui/SettingsMenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Client="*res://Scripts/Client.gd"
 
 [input]
 
