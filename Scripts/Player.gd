@@ -1,14 +1,23 @@
 extends CharacterBody3D
 
+@onready var camera: Camera3D = $Camera3D
 @export var SPEED = 5.0
 @export var JUMP_VELOCITY = 4.5
-const MIN_LOOK_ANGLE: float = -75.0
-const MAX_LOOK_ANGLE: float = 75.0
+const MIN_LOOK_ANGLE: float = -90.0
+const MAX_LOOK_ANGLE: float = 90.0
+var look_sensitivity : float = 0.05
 
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+func _input(event):
+	if event is InputEventMouseMotion:
+		if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			rotation.y += -deg_to_rad(event.relative.x * look_sensitivity)
+			camera.rotation.x += -deg_to_rad(event.relative.y * look_sensitivity)
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(MIN_LOOK_ANGLE), deg_to_rad(MAX_LOOK_ANGLE))
 
 func _physics_process(delta):
 	if not is_on_floor():

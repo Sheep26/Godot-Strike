@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://ev2ujs1ugwjk"]
+
+[ext_resource type="PackedScene" uid="uid://bvd5x55dea6ib" path="res://Entitys/Player.tscn" id="2_1tpot"]
+
+[node name="ExampleMap" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.764876, -0.442541, 0.468105, 1.28143e-08, 0.726671, 0.686986, -0.644177, -0.525459, 0.555813, 0, 0, 0)
+light_energy = 2.0
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_1tpot")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(4.39753, 0, 0, 0, 1.00345, 0, 0, 0, 4.76961, 0, -1.22741, 0)
+use_collision = true
