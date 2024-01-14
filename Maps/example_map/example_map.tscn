@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://ev2ujs1ugwjk"]
+
+[ext_resource type="PackedScene" uid="uid://dxylqjlyxxcvc" path="res://Entitys/Player.tscn" id="1_cfiut"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7368h"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_krf7g"]
+
+[node name="ExampleMap" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.0206, 0.106991)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_7368h")
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
+[node name="Player" parent="." instance=ExtResource("1_cfiut")]
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0785699, -2.03577)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("BoxShape3D_7368h")
+
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody3D2"]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+texture = SubResource("CanvasTexture_krf7g")
