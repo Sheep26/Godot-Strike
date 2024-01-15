@@ -52,6 +52,20 @@ offset_bottom = 39.0
 text = "Settings"
 flat = true
 
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.866025, 0.211309, -0.453154, 0, 0.906308, 0.422618, 0.5, -0.365998, 0.784886, -5.66414, 5.74246, 10.7747)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(11.1898, 0, 0, 0, 1, 0, 0, 0, 13.2566, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999382, 0.0276384, 0.0217071, 7.38743e-09, -0.617668, 0.786439, 0.0351437, -0.785954, -0.617286, 0, 2.20865, 0)
+light_energy = 8.577
+shadow_enabled = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(2.73985, 0, -0.437398, 0, 3.2761, 0, 1.33265, 0, 0.899268, 1.69028, 2.0572, -3.48286)
+
 [connection signal="pressed" from="ColorRect/HomeButton" to="." method="_homeButtonPressed"]
 [connection signal="pressed" from="ColorRect/PlayButton" to="." method="_playButtonPressed"]
 [connection signal="pressed" from="ColorRect/SettingsButton" to="." method="_settingsButtonPressed"]

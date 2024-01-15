@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://05k57bxg4k0f"]
+
+[ext_resource type="Script" path="res://Scripts/Gun.gd" id="1_pk2r4"]
+
+[node name="Gun" type="Node3D"]
+script = ExtResource("1_pk2r4")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.35, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+
+[node name="Guns" type="Node" parent="."]
+
+[node name="pistol" type="Node" parent="Guns"]
+
+[node name="firerateTimer" type="Timer" parent="Guns/pistol"]
+wait_time = 0.1
+
+[node name="reloadTimer" type="Timer" parent="Guns/pistol"]
+wait_time = 2.0
+
+[node name="ak47" type="Node" parent="Guns"]
+
+[node name="firerateTimer" type="Timer" parent="Guns/ak47"]
+wait_time = 0.1
+
+[node name="reloadTimer" type="Timer" parent="Guns/ak47"]
+wait_time = 2.5

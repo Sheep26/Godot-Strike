@@ -9,6 +9,8 @@
 
 [node name="Player" type="CharacterBody3D"]
 script = ExtResource("1_77ecj")
+SPEED = null
+JUMP_VELOCITY = null
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -18,11 +20,8 @@ shape = SubResource("CapsuleShape3D_3y5yj")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 fov = 90.0
 
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
-target_position = Vector3(0, 0, -1000)
-
 [node name="Gun" parent="Camera3D" instance=ExtResource("2_5eyfk")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.244749, -0.221981, -0.3251)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.289533, -0.0956559, -0.508807)
 
 [node name="Node2D" type="Node2D" parent="Camera3D"]
 
