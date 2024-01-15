@@ -34,3 +34,6 @@ func _playButtonPressed():
 	play._instantiate()
 	add_child(play.instance)
 	move_child(play.instance, 0)
+
+func _onQuitPressed():
+	get_tree().quit()

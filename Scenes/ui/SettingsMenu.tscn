@@ -11,8 +11,8 @@ grow_vertical = 2
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 0
 offset_top = 47.0
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0.168627, 0.168627, 0.168627, 0.854902)
 
 [node name="AntiAliasing" type="Control" parent="ColorRect"]

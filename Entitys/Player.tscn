@@ -27,7 +27,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.2447
 [node name="Node2D" type="Node2D" parent="Camera3D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="Camera3D/Node2D"]
-position = Vector2(576, 324)
+position = Vector2(960, 540)
 scale = Vector2(10, 10)
 texture = SubResource("PlaceholderTexture2D_0xpqf")
 
