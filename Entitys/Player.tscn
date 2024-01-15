@@ -14,3 +14,7 @@ shape = SubResource("CapsuleShape3D_3y5yj")
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 fov = 90.0
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2.01432, 0, 0, 0, 1, 0, 1, 0)
+smooth_faces = false

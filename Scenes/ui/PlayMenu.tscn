@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://78jj5ujf2gy"]
 
-[ext_resource type="Script" path="res://Scenes/ui/test.gd" id="1_m556v"]
+[ext_resource type="Script" path="res://Scripts/PlayMenu.gd" id="1_7iis1"]
 
 [node name="PlayMenu" type="Control"]
 layout_mode = 3
@@ -9,10 +9,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_m556v")
+script = ExtResource("1_7iis1")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-layout_mode = 1
+[node name="Node" type="Node" parent="."]
+
+[node name="Button2" type="Button" parent="Node"]
+offset_left = 523.0
+offset_top = 195.0
+offset_right = 610.0
+offset_bottom = 226.0
+text = "test"
+
+[node name="JoinButton" type="Button" parent="Node"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -16.0
+offset_right = 107.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Join"
+
+[node name="TextEdit" type="TextEdit" parent="Node"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -26,27 +48,20 @@ grow_horizontal = 2
 grow_vertical = 2
 placeholder_text = "Server IP"
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 1
+[node name="HostButton" type="Button" parent="Node"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -43.5
-offset_top = -15.5
-offset_right = 43.5
-offset_bottom = 15.5
+offset_left = -107.0
+offset_top = -16.0
+offset_right = -20.0
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Join"
+text = "host"
 
-[node name="Button2" type="Button" parent="."]
-layout_mode = 0
-offset_left = 523.0
-offset_top = 195.0
-offset_right = 610.0
-offset_bottom = 226.0
-text = "test"
-
-[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Node/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Node/JoinButton" to="." method="_on_join_button_pressed"]
+[connection signal="pressed" from="Node/HostButton" to="." method="_on_host_button_pressed"]

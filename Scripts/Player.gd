@@ -34,7 +34,7 @@ func _process(_delta):
 			get_tree().root.add_child(menu_instantiated)
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		else:
-			get_tree().root.remove_child(menu_instantiated)
+			menu_instantiated.queue_free()
 			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta):
